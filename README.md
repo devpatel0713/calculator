@@ -22,7 +22,7 @@ The calculator supports basic arithmetic operations as well as scientific functi
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/calculator-tkinter.git
+    git clone https://github.com/devpatel0713/calculator.git
     cd calculator-tkinter
     ```
 
