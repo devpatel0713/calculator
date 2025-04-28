@@ -6,10 +6,10 @@ import tkinter.messagebox
 root = Tk()
 root.title("Standard Calculator")
 root.resizable(width= False, height = False)
-root.geometry("400x400+460+40")
+root.geometry("375x375+460+40")
 
 
-txtResult = Entry(font = ('arial', 16,'bold'),bg="black", bd = 30, width = 26 , justify=RIGHT)
+txtResult = Entry(root,font = ('arial', 16,'bold'),bg="white",fg = "black", bd = 30, width = 26 , justify=RIGHT)
 txtResult.grid(row = 0, column= 0, columnspan= 4, pady = 1)
 
 scientific_buttons = []
@@ -25,7 +25,7 @@ def clear():
 def backspace():
     temp = txtResult.get()
     txtResult.delete(0,END)
-    txtResult.insert(0, temp[0, -1])
+    txtResult.insert(0, temp[:-1])
 
 def answer():
     temp = str(txtResult.get())
@@ -177,7 +177,7 @@ def Standard():
    remove_scientific()
    root.title("Standard Calculator")
    root.resizable(width= False, height = False)
-   root.geometry("400x400+460+40")
+   root.geometry("375x375+460+40")
    txtResult.config(width = 26)
    txtResult.grid(columnspan= 4)
    txtResult.delete(0, END)
